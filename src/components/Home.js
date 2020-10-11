@@ -9,7 +9,7 @@ class Home extends React.Component {
     }
 
     componentDidMount = () => {
-        fetch('/api/questions')
+        fetch('/api/users')
             .then(res => res.json())
             .then(questions => this.setState({questions},() => console.log(this.state.questions)))
             .catch(e => console.log(e))
