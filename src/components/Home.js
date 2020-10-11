@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Loader from './Loader'
+
 class Home extends React.Component {
     constructor(props){
         super(props)
@@ -15,6 +17,14 @@ class Home extends React.Component {
             .catch(e => console.log(e))
     }
     render = () => {
+        if(this.state.questions.length == 0){
+            return <div className="ui raised segment container">
+                <h1>Survey Dash board</h1>
+                    <div className='ui segment'>
+                        <Loader message='Fetching....' />
+                    </div>
+            </div>
+        }
         return <div className="ui raised segment container">
             <h1>Survey Dash board</h1>
             <ol>
