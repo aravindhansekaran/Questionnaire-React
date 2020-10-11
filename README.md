@@ -1,3 +1,29 @@
+# Questionnaire-React
+
+A frontend questionnaire app
+
+### index.js
+The application is rendered by this file to the index.html file in the public folder.
+
+### App.js
+This is the page where all contents are displayed. index.js renders App.js to the user.
+
+### components/
+This folder contains all the reusable components required for the application.
+
+### Home.js
+This will be displayed when user gets into the application.
+This takes data from the signed up users database and displays.
+
+### questions/
+These components can be used to render the questions for the users.
+QuestionCard.js takes in Choice.js and forms a question.
+Questions.js takes an array of QuestionCard.js to render the questions.
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
