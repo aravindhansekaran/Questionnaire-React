@@ -21,7 +21,6 @@ class LogIn extends React.Component {
     }
 
     handleSubmit = (e) => {
-        console.log(this.state)
         fetch('/api/login',
          {headers: { 'Content-Type': 'application/json' },
          method : 'POST',
@@ -29,8 +28,6 @@ class LogIn extends React.Component {
          }).then(res => {
                 if(res.status === 200){
                 this.setState({
-                    username: '',
-                    password: '',
                     loggedin : true
                 })
             }else{

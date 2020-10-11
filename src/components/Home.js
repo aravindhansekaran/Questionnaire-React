@@ -16,10 +16,10 @@ class Home extends React.Component {
     }
     render = () => {
         return <div className="ui raised segment container">
-            <h1>Home</h1>
-            <ul>
-    {this.state.questions.map(question => <li key ={question.id}>{question.id} = {question.firstName} {question.lastName}</li>)}
-            </ul>
+            <h1>Survey Dash board</h1>
+            <ol>
+                {this.state.questions.map(user => <li id={user._id}>{user.username} = {user.firstname} {user.lastname}</li>)}
+            </ol>
         </div>
     }
 }

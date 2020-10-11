@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'semantic-ui-react'
 
 import QuestionCard from './QuestionCard'
-import Choice from './Choice'
+// import Choice from './Choice'
 
 class Question extends React.Component {
 
@@ -18,7 +18,7 @@ class Question extends React.Component {
         
         await fetch('/api/questionsreal',{headers:{'Content-Type' : 'application/json'}})
             .then(res => res.json()
-            .then(questions => this.setState({ questions: questions }))
+            .then(questions => this.setState({ questions }))
             )
             .catch(e => console.error(e))
         this.setState({ flag: true })
@@ -36,7 +36,7 @@ class Question extends React.Component {
         
         return <div>
             <h1>Questions</h1>
-            <h1>{this.state.questions.questionnaire.name}</h1>
+            <h1>{this.state.questions.questionnaire.id}</h1>
             <QuestionCard question='What is your name' />
         </div>
         

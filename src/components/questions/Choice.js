@@ -1,16 +1,11 @@
 import React from 'react'
 
 class Choice extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
-
-        }
-    }
-
     render(){
         return <div className='ui segment'>
-            <h1>Choice</h1>  
+            {
+                this.props.choices.map(choice => <input type='radio' name='cons' value ={this.props.choice}/>)
+            }
         </div>
     }
 }

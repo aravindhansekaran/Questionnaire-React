@@ -31,10 +31,6 @@ class SignUp extends React.Component {
         }).then(res => {
             if(res.status === 200){
                 this.setState({
-                    firstname: '',
-                    lastname: '',
-                    username: '',
-                    password: '',
                     valid: true
                 })
             }else{

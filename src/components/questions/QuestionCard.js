@@ -13,9 +13,20 @@ class QuestionCard extends React.Component {
     }
 
     render() {
+        const choices = [
+            {
+                choice: 'Hello'
+            },
+            {
+                choice: 'World'
+            },
+            {
+                choice: 'Yall'
+            }
+        ]
         return <div className='ui segment'>
             <label>{this.props.question}</label>
-            
+            <Choice choices={choices}/>
         </div>
     }
 }
